@@ -28,7 +28,14 @@
 		 
 			 */
 
-		
+	$num1 = 10;
+	$num2 = 20; 
+	echo $num1 + $num2 . "<br>". "<br>";
+	$array = [10,20];
+	$arrayAss = ["num1"=> 10, "num2"=>20];
+
+	echo $array[0] . " " . $arrayAss["num1"] . "<br>";
+	echo $array[1] . " " . $arrayAss["num2"] . "<br>";
 
 
 		?>
