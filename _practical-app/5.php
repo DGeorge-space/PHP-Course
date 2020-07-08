@@ -25,6 +25,19 @@
 
  */
 
+ echo pow(2,100);
+
+ $string = "MY NAME IS DANIEL";
+
+ echo strtolower($string);
+
+ $array1 = [23,5435,56546677,5434343,665356663,1];
+
+ $array2 = sort($array1);
+
+ echo print_r($array2);
+ 
+
 	
 ?>
 
