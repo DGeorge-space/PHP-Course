@@ -20,8 +20,16 @@
 
 	Step 2: Make a function that passes parameters and call it using parameter values
 
-
  */
+	function multiply($num1, $num2){
+		return $num1 * $num2;
+	}
+
+	$num1 = 12;
+
+	$num2 = 13.7;
+
+	echo $num1 . " * " . $num2 . " = " . multiply($num1,$num2);
 
 	
 ?>
