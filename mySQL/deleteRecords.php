@@ -2,12 +2,13 @@
 <?php include "functions.php" ?>
 
 <?php
-if (isset($_POST['submit'])) {
 
-    deleteRows();
-}
+
+deleteRows();
+
 ?>
 
+<!-- Below is the HTML CODE for this page: -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +23,7 @@ if (isset($_POST['submit'])) {
 
     <div class="container">
         <div class="col-sm-6">
+            <h1 class="text-center">DELETE A RECORD </h1>
 
             <form action="deleteRecords.php" method="POST">
                 <div class="form-group">

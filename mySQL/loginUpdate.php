@@ -2,12 +2,11 @@
 <?php include "functions.php" ?>
 
 <?php
-if (isset($_POST['submit'])) {
+updateTable();
 
-    updateTable();
-}
 ?>
 
+<!-- Below is the HTML CODE for this page: -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +21,7 @@ if (isset($_POST['submit'])) {
 
     <div class="container">
         <div class="col-sm-6">
+            <h1> Update </h1>
 
             <form action="loginUpdate.php" method="POST">
                 <div class="form-group">

@@ -27,7 +27,7 @@ if (!$result) {
 ?>
 
 
-
+<!-- Below is the HTML CODE for this page: -->
 <!DOCTYPE html>
 <html lang="en">
 <head>

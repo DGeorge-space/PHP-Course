@@ -1,37 +1,12 @@
 <?php
 include 'db.php';
+include 'functions.php';
 
-//CRUD:
-
-//CREATING
-
-if(isset($_POST['submit'])){
-    $username=$_POST['username'];
-    $password=$_POST['password'];
-    
-
-            //writing a query to a database:
-            $query = "INSERT INTO users(username,password)";
-
-            //concatenate our query:
-            $query .= "VALUES ('$username', '$password')";
-            
-            //the above is a neater way to submitting the query rather than putting all of lines 15-22 inside of mysqli_query()
-
-            $result = mysqli_query($connection, $query);
-
-            if(!$result){
-                die('Query Failed ');
-            }
-
-
-}
-
-
+createRecord();
 ?>
 
 
-
+<!-- Below is the HTML CODE for this page: -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,6 +21,7 @@ if(isset($_POST['submit'])){
 
     <div class="container">
         <div class="col-sm-6">
+            <h1 class="text-center">Create</h1>
             <form action="creatingDatabaseRecords.php" method="POST">
                 <div class="form-group">
                     <label for="username">Username</label>
@@ -56,7 +32,7 @@ if(isset($_POST['submit'])){
                     <input type="password" name="password" class="form-control">
                 </div>
 
-                <input class="btn btn-primary" type="submit" name="submit" value="Submit">
+                <input class="btn btn-primary" type="submit" name="submit" value="Create">
 
             </form>
 
