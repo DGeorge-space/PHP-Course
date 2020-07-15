@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width= , initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <title>Update Records</title>
+    <title>Deleting Records</title>
 </head>
 
 <body>
@@ -45,7 +45,7 @@ if (isset($_POST['submit'])) {
                     </select>
                 </div> <!-- form group -->
 
-                <input class="btn btn-primary" type="submit" name="submit" value="Update">
+                <input class="btn btn-primary" type="submit" name="submit" value="Delete">
 
 
 
