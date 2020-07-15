@@ -26,6 +26,32 @@
 		Step 4 - echo the variable
 
 	*/
+
+	$name = "DANIEL JAMES GEORGE";
+
+	$hashForm = "$2y$10$";
+
+	$salt = "amanwalkedtothetowninl";
+
+	$nameCrypt = crypt($name, $hashForm.$salt);
+
+	echo $nameCrypt."<br>";
+
+
+
+	$salt = "ottffssentettffssent12";
+
+	$nameCrypt = crypt($name, $hashForm.$salt);
+
+	echo $nameCrypt."<br>";
+
+
+
+	$salt = "iusesomecrazystrings22";
+
+	$nameCrypt = crypt($name, $hashForm.$salt);
+
+	echo $nameCrypt."<br>";
 	
 	?>
 

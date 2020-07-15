@@ -10,6 +10,23 @@ function createRecord()
         $username = $_POST['username'];
         $password = $_POST['password'];
 
+        // this function escapes any character that could cause interference!
+        $username = mysqli_real_escape_string($connection,$username);
+        $password = mysqli_real_escape_string($connection,$password);
+        
+        $hashFormat = "$2y$10$"; //number after the second $ tells the crypt function to run 10 times, $2y$ is the preferred security as it stands
+        
+        $salt = "iusesomecrazystrings22";//this is seed for the encryption must be 22 chars long 
+
+        $hashF_and_salt = $hashFormat.$salt;
+
+        //combine the hash format with the salt 
+
+
+        $password = crypt($password,$hashF_and_salt);
+
+        // encrypt and replace or value
+
 
         //writing a query to a database:
         $query = "INSERT INTO users(username,password)";
