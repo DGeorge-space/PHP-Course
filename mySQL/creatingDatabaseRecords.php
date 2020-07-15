@@ -1,4 +1,5 @@
 <?php
+include 'db.php';
 
 //CRUD:
 
@@ -7,14 +8,7 @@
 if(isset($_POST['submit'])){
     $username=$_POST['username'];
     $password=$_POST['password'];
-    $connection = mysqli_connect('localhost','root','', 'loginapp');
-
-            if($connection){ //if connection successful 
-                echo "we are connected!";
-            }
-            else{
-                die("Dbase connection failed"); //die() kills the program and gives an error
-            }
+    
 
             //writing a query to a database:
             $query = "INSERT INTO users(username,password)";
