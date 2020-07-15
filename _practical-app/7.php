@@ -27,7 +27,24 @@
 		Step 4 - Connect to Database and read data
 
 */
+	$connection = mysqli_connect('localhost','root','','section7');
+	if(!$connection){
+		echo "Connection failed ".mysqli_error($connection);
+	}
+
+
+
+	$query = "SELECT * FROM users";
 	
+	$result = mysqli_query($connection,$query);
+
+	if(!$result){
+		echo "Query Failed ". mysqli_error($connection);
+	}
+	while($row = mysqli_fetch_assoc($result)){
+		print_r($row); 
+		echo"<br>";
+	}
 	?>
 
 

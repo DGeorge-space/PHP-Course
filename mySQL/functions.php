@@ -31,6 +31,22 @@ function createRecord()
     }
 }
 
+function read()
+{
+    global $connection;
+    // 'select all from users'
+    $query = "SELECT * FROM users";
+    $result = mysqli_query($connection, $query);
+
+
+    if (!$result) {
+        die('Query Failed ' . mysqli_error($connection));
+    }
+    while ($row = mysqli_fetch_assoc($result)) {
+        print_r($row);
+    }
+}
+
 //Retrieve
 function showAllData()
 {

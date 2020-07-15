@@ -2,7 +2,9 @@
 <?php include "functions.php" ?>
 
 <?php
-updateTable();
+
+
+deleteRows();
 
 ?>
 
@@ -14,16 +16,16 @@ updateTable();
     <meta charset="UTF-8">
     <meta name="viewport" content="width= , initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <title>Update Records</title>
+    <title>Deleting Records</title>
 </head>
 
 <body>
 
     <div class="container">
         <div class="col-sm-6">
-            <h1> Update </h1>
+            <h1 class="text-center">DELETE A RECORD </h1>
 
-            <form action="loginUpdate.php" method="POST">
+            <form action="delete.php" method="POST">
                 <div class="form-group">
                     <label for="username">Username</label>
                     <input type="text" name="username" class="form-control">
@@ -45,7 +47,7 @@ updateTable();
                     </select>
                 </div> <!-- form group -->
 
-                <input class="btn btn-primary" type="submit" name="submit" value="Update">
+                <input class="btn btn-primary" type="submit" name="submit" value="Delete">
 
 
 
@@ -58,6 +60,4 @@ updateTable();
         </div>
     </div>
 
-</body>
-
-</html>
+<?php include "includes/footer.php" ?>

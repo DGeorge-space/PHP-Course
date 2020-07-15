@@ -1,31 +1,22 @@
 <?php include "db.php" ?>
 <?php include "functions.php" ?>
+<?php include "includes/header.php"?>
 
 <?php
-
-
-deleteRows();
+updateTable();
 
 ?>
 
 <!-- Below is the HTML CODE for this page: -->
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width= , initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <title>Deleting Records</title>
-</head>
 
 <body>
 
     <div class="container">
         <div class="col-sm-6">
-            <h1 class="text-center">DELETE A RECORD </h1>
+            <h1> Update </h1>
 
-            <form action="deleteRecords.php" method="POST">
+            <form action="update.php" method="POST">
                 <div class="form-group">
                     <label for="username">Username</label>
                     <input type="text" name="username" class="form-control">
@@ -47,7 +38,7 @@ deleteRows();
                     </select>
                 </div> <!-- form group -->
 
-                <input class="btn btn-primary" type="submit" name="submit" value="Delete">
+                <input class="btn btn-primary" type="submit" name="submit" value="Update">
 
 
 
@@ -60,6 +51,4 @@ deleteRows();
         </div>
     </div>
 
-</body>
-
-</html>
+    <?php include "includes/footer.php" ?>
